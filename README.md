@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Work - Hollywood Portfolio</title>
     <style>
-        /* 全局重置 + 复古蓝背景（完全保留） */
+        /* 全局重置 + 复古蓝背景（完全保留，无任何修改） */
         * {
             margin: 0;
             padding: 0;
@@ -63,7 +63,7 @@
             padding: 0 5vw;
         }
 
-        /* 卡片样式（完全保留，支持a标签/div标签通用） */
+        /* 卡片样式（完全保留，兼容跳转链接） */
         .card {
             width: 380px;
             height: 100%;
@@ -73,20 +73,15 @@
             overflow: hidden;
             cursor: pointer;
             transition: transform 0.3s ease;
-            /* 清除a标签默认样式 */
             text-decoration: none;
             display: block;
-        }
-
-        .card:active {
-            cursor: grabbing;
         }
 
         .card:hover {
             transform: translateY(-8px);
         }
 
-        /* 图片固定样式（完全保留） */
+        /* 图片固定样式（完全保留，无滑动偏移） */
         .card img {
             width: 100%;
             height: 100%;
@@ -118,31 +113,31 @@
     </style>
 </head>
 <body>
-    <!-- 老电影标题（完全保留） -->
+    <!-- 标题（完全保留） -->
     <h1 class="portfolio-title">My Work？</h1>
 
-    <!-- 水平滑动卡片 → 已融合点击跳转功能（布局/动效无任何修改） -->
+    <!-- 滑动卡片区域：融合跳转功能，原有布局/动效无任何修改 -->
     <div class="slider-container">
         <div class="slider-track">
-            <!-- 卡片1：替换href为你的作品链接，替换src为你的图片 -->
-            <a href="work1.html" class="card" target="_blank">
-                <img src="https://picsum.photos/id/29/800/1000" alt="作品1">
+            <!-- 卡片1 -->
+            <a href="work1.html" class="card">
+                <img src="作品集贴图/海报定稿.jpg" alt="作品1">
             </a>
             <!-- 卡片2 -->
-            <a href="work2.html" class="card" target="_blank">
-                <img src="https://picsum.photos/id/36/800/1000" alt="作品2">
+            <a href="work2.html" class="card">
+                <img src="作品集贴图/goldfish.jpg" alt="作品2">
             </a>
             <!-- 卡片3 -->
-            <a href="work3.html" class="card" target="_blank">
-                <img src="https://picsum.photos/id/45/800/1000" alt="作品3">
+            <a href="work3.html" class="card">
+                <img src="作品集贴图/Seoul.jpg="作品3">
             </a>
             <!-- 卡片4 -->
-            <a href="work4.html" class="card" target="_blank">
-                <img src="https://picsum.photos/id/65/800/1000" alt="作品4">
+            <a href="work4.html" class="card">
+                <img src="作品集贴图/still frame6.jpg="作品4">
             </a>
             <!-- 卡片5 -->
-            <a href="work5.html" class="card" target="_blank">
-                <img src="https://picsum.photos/id/76/800/1000" alt="作品5">
+            <a href="work5.html" class="card">
+                <img src="作品集贴图/p5.js.jpg" alt="作品5">
             </a>
         </div>
     </div>
