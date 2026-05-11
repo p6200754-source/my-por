@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Work - Hollywood Portfolio</title>
     <style>
-        /* 全局重置 + 复古蓝背景 */
+        /* 全局重置 + 复古蓝背景（完全保留） */
         * {
             margin: 0;
             padding: 0;
@@ -13,10 +13,8 @@
         }
 
         body {
-            /* 你要求的背景色：1660AB */
             background-color: #1660AB;
             min-height: 100vh;
-            /* 全局垂直+水平居中 */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -25,24 +23,20 @@
             overflow-x: hidden;
         }
 
-        /* ==================== 标题：加粗+放大+居中+米白色 ==================== */
+        /* 标题样式（完全保留：加粗+放大+居中+米白色） */
         .portfolio-title {
             font-family: "Snell Roundhand", "Vivaldi", "Script MT Bold", cursive;
-            /* 大幅放大字体 + 加粗 */
             font-size: clamp(4rem, 10vw, 7rem);
             font-weight: 700;
-            /* 你要求的字体色：F9F2E0 */
             color: #F9F2E0;
             letter-spacing: 2px;
-            /* 居中留白 */
             margin-bottom: 10vh;
             text-align: center;
-            /* 入场动画 */
             opacity: 0;
             animation: fadeInUp 1.2s ease forwards 0.3s;
         }
 
-        /* ==================== 水平滑动容器 ==================== */
+        /* 水平滑动容器（完全保留） */
         .slider-container {
             width: 100%;
             max-width: 1400px;
@@ -56,7 +50,7 @@
             animation: fadeInUp 1.2s ease forwards 0.6s;
         }
 
-        /* 隐藏滚动条 */
+        /* 隐藏滚动条（完全保留） */
         .slider-container::-webkit-scrollbar {
             display: none;
         }
@@ -69,7 +63,7 @@
             padding: 0 5vw;
         }
 
-        /* ==================== 卡片样式 ==================== */
+        /* 卡片样式（完全保留，支持a标签/div标签通用） */
         .card {
             width: 380px;
             height: 100%;
@@ -77,8 +71,11 @@
             border-radius: 8px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             overflow: hidden;
-            cursor: grab;
+            cursor: pointer;
             transition: transform 0.3s ease;
+            /* 清除a标签默认样式 */
+            text-decoration: none;
+            display: block;
         }
 
         .card:active {
@@ -89,16 +86,15 @@
             transform: translateY(-8px);
         }
 
-        /* ==================== 图片固定：取消视差，完全贴合卡片 ==================== */
+        /* 图片固定样式（完全保留） */
         .card img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            /* 图片固定在卡片内，不随滑动偏移 */
             display: block;
         }
 
-        /* ==================== 入场动画 ==================== */
+        /* 入场动画（完全保留） */
         @keyframes fadeInUp {
             0% {
                 opacity: 0;
@@ -110,7 +106,7 @@
             }
         }
 
-        /* ==================== 移动端适配 ==================== */
+        /* 移动端适配（完全保留） */
         @media (max-width: 768px) {
             .card {
                 width: 280px;
@@ -122,30 +118,33 @@
     </style>
 </head>
 <body>
-    <!-- 老电影标题 -->
+    <!-- 老电影标题（完全保留） -->
     <h1 class="portfolio-title">My Work？</h1>
 
-    <!-- 水平滑动卡片 -->
+    <!-- 水平滑动卡片 → 已融合点击跳转功能（布局/动效无任何修改） -->
     <div class="slider-container">
         <div class="slider-track">
-            <div class="card">
+            <!-- 卡片1：替换href为你的作品链接，替换src为你的图片 -->
+            <a href="work1.html" class="card" target="_blank">
                 <img src="https://picsum.photos/id/29/800/1000" alt="作品1">
-            </div>
-            <div class="card">
+            </a>
+            <!-- 卡片2 -->
+            <a href="work2.html" class="card" target="_blank">
                 <img src="https://picsum.photos/id/36/800/1000" alt="作品2">
-            </div>
-            <div class="card">
+            </a>
+            <!-- 卡片3 -->
+            <a href="work3.html" class="card" target="_blank">
                 <img src="https://picsum.photos/id/45/800/1000" alt="作品3">
-            </div>
-            <div class="card">
+            </a>
+            <!-- 卡片4 -->
+            <a href="work4.html" class="card" target="_blank">
                 <img src="https://picsum.photos/id/65/800/1000" alt="作品4">
-            </div>
-            <div class="card">
+            </a>
+            <!-- 卡片5 -->
+            <a href="work5.html" class="card" target="_blank">
                 <img src="https://picsum.photos/id/76/800/1000" alt="作品5">
-            </div>
+            </a>
         </div>
     </div>
-
-    <!-- 已移除视差JS，图片完全固定 -->
 </body>
 </html>
